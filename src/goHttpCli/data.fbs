@@ -1,0 +1,26 @@
+namespace data;
+
+enum Color:byte{Red = 1, Green, Blue}
+
+union Any{Monster, Weapon}
+
+struct Vec2{
+	x:float;
+	y:float;
+}
+
+table Monster{
+	pos:Vec2;
+	hp:short=100;
+	name:string;
+	color:Color=Blue;
+	test:Any;
+}
+
+table Weapon{
+	pos:Vec2;
+	hp:short=150;
+}
+
+root_type Monster;
+root_type Weapon;
